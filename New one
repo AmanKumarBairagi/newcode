@@ -1,0 +1,52 @@
+#python program for stone paper and scissors
+
+print("WELCOME TO STONE PAPER AND SCISSORS GAME")
+
+sum1=0
+sum2=0
+
+import random
+a=input("Enter Player Name")
+n=int(input("How many time do you want to play"))
+for i in range(0,n):
+    move=["stone","paper","scissor"]
+    cmove=random.choice(move)
+    amove=input("Enter Your Choice")
+
+    print("COmputer chosed---->",cmove)
+
+    if cmove==amove:
+        print("Game Tied")
+    elif cmove=="stone" and amove=="paper":
+        print(a,"you won")
+        sum1+=1
+    elif cmove=="stone" and amove=="scissor":
+        print("Computer won")
+        sum2+=1
+    elif cmove=="paper" and amove=="stone":
+        print("Computer won")
+        sum2+=1
+    elif cmove=="paper" and amove=="scissor":
+        print(a,"you won")
+        sum1+=1
+    elif cmove=="scissor" and amove=="paper":
+        print("Computer won")
+        sum2+=1
+    elif cmove=="scissor" and amove=="stone":
+        print(a,"you won")
+        sum1+=1
+    else:
+        print("Enter any Valid Choice")
+print("Thanks for Playing")
+print("score of ",a,"is",sum1,"point")
+print("score of computer is ",sum2,"point")
+
+if sum1>sum2:
+    print(a,"won the Series")
+    print("Congratulations")
+elif sum2>sum1:
+    print("Computer won the series")
+else:
+    print("Scores levels throught the Series")
+
+print("Thanks For Playing")
