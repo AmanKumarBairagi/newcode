@@ -15,8 +15,9 @@ for i in range(0,n):
 
     print("COmputer chosed---->",cmove)
 
-    if cmove==amove:
-        print("Game Tied")
+    if amove!=move:
+        print("Enter valid choice next time")
+        break
     elif cmove=="stone" and amove=="paper":
         print(a,"you won")
         sum1+=1
@@ -36,7 +37,7 @@ for i in range(0,n):
         print(a,"you won")
         sum1+=1
     else:
-        print("Enter any Valid Choice")
+        print("Game tied")
 print("Thanks for Playing")
 print("score of ",a,"is",sum1,"point")
 print("score of computer is ",sum2,"point")
